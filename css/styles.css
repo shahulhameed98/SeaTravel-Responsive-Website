@@ -292,7 +292,7 @@ i {
 	background-color: #00be85;
 }
 /* Popular-destinations */
-.popular-destinations-container{
+.popular-destinations-container {
 	gap: var(--gap-lg);
 }
 
@@ -343,6 +343,11 @@ i {
 .btn.place-items-center {
 	display: inline-flex;
 }
+
+/* Plan trip */
+.plan-trip-container {
+	gap: var(--gap-lg);
+}
 /* Newsletter */
 
 /* Footer */
@@ -350,7 +355,8 @@ i {
 /* Media queries */
 @media screen and (min-width: 768px) {
 	.showcase-container,
-	.popular-destinations-container {
+	.popular-destinations-container,
+	.plan-trip-container {
 		grid-template-columns: repeat(2, 1fr);
 		align-items: center;
 	}
