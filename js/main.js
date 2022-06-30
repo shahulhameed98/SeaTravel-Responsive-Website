@@ -2,7 +2,7 @@
 const menuToggleIcon = document.getElementById("menu-toggle-icon");
 const navMobile = document.getElementById("nav");
 const headerElement = document.getElementById("header");
-// const menuToggleIcon = document.getElementById("menu-toggle-icon");
+const navLinks = document.querySelectorAll(".nav-mobile .list-link");
 
 // Toggle navigation
 const toggleMenu = () => {
@@ -22,5 +22,14 @@ const headerScrollEvent = () => {
 
 window.addEventListener("scroll", headerScrollEvent);
 // Add selected link styles to the link clicked and close navigation when clicking the links
+navLinks.forEach((link) =>
+	link.addEventListener("click", () => {
+		navMobile.classList.toggle("active");
+		headerElement.classList.toggle("active");
 
+		let current = document.getElementsByClassName("current");
+		current[0].className = current[0].className.replace(" current", "");
+		link.className += " current";
+	})
+);
 // Scroll Reveal
